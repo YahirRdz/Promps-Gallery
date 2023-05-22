@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
+import Link from "next/link";
 
 const Nav = () => {
   const isUserLoggedIn = true;
@@ -84,19 +84,19 @@ const Nav = () => {
                 <Link
                   href='/profile'
                   className='dropdown_link'
-                  onClick={() => settoggleDropdown(true)}>
+                  onClick={() => settoggleDropdown(false)}>
                   My Profile
                 </Link>
                 <Link
                   href='/create-prompt'
                   className='dropdown_link'
-                  onClick={() => settoggleDropdown(true)}>
+                  onClick={() => settoggleDropdown(false)}>
                   Create Prompt
                 </Link>
                 <button
                   type='button'
                   onClick={() => {
-                    settoggleDropdown(true);
+                    settoggleDropdown(false);
                     signOut();
                   }}
                   className='mt-5 w-full black_btn'>
